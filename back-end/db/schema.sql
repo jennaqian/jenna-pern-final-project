@@ -3,9 +3,15 @@ CREATE DATABASE cta_dev;
 
 \c cta_dev;
 
-DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS candles;
 
-CREATE TABLE test (
+CREATE TABLE candles (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    name TEXT NOT NULL,
+    price INTEGER,
+    scent TEXT,
+    image TEXT,
+    rating INTEGER,
+    featured BOOLEAN,
+    description TEXT
 );
