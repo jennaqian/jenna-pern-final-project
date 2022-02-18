@@ -9,15 +9,19 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON
+require("dotenv").config()
 
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Welcome to Candle-licious!");
 });
 
-app.get("/candles", candleController)
+app.use("/candles", candleController)
 
-
+//404 PAGE
+app.get("*", (req, res)=> {
+  res.status(404).send("Page not found!")
+})
 
 /////////////////////////////////////
 // REMOVE AFTER SUCCESSFUL DEPLOYMENT
