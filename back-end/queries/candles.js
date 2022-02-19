@@ -45,9 +45,22 @@ const deleteCandle = async (id) => {
     }
 }
 
+const updateCandle = async (id, candle) => {
+    try {
+        const updatedCandle = await db.one(
+            "UPDATE candles SET name=$1, price=$2, scent=$3, image=$4, rating=$5, featured=$6, description=$7 WHERE id=$8 RETURNING *",
+            [candle.name, candle.price, candle.scent, candle.image, candle.rating, candle.featured, candle.description, id]
+        )
+        return updatedCandle
+    } catch (error) {
+        return error
+    }
+}
+
 module.exports = {
     getAllCandles,
     getCandle,
     addCandle,
     deleteCandle,
+    updateCandle,
 };
