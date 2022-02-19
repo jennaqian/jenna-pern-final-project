@@ -1,6 +1,6 @@
 const express = require("express");
 const candles = express.Router();
-const { getAllCandles, getCandle, addCandle } = require("../queries/candles.js")
+const { getAllCandles, getCandle, addCandle, deleteCandle } = require("../queries/candles.js")
 
 candles.get("/", async (req, res) => {
     const allCandles = await getAllCandles()
@@ -43,7 +43,19 @@ candles.post("/", async (req,res) => {
     }
 })
 
-
+candles.delete("/:id", async (req, res) => {
+    const { id } = req.params
+    const deletedCandle = await deleteCandle(id)
+    try {
+        if(deletedCandle.id){
+            res.status(200).json(deletedCandle)
+        }else {
+            res.status(404).json({error: "unable to delete"})
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 
 module.exports = candles;

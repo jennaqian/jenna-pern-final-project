@@ -24,11 +24,22 @@ const getCandle = async ( id ) => {
 
 const addCandle = async (candle) => {
     try {
-        const newCandle = await db.one(
+        const addCandle = await db.one(
             "INSERT INTO candles (name, price, scent, image, rating, featured, description) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *",
             [candle.name, candle.price, candle.scent, candle.image, candle.rating, candle.featured, candle.description]
         )
-        return newCandle
+        return addCandle
+    } catch (error) {
+        return error
+    }
+}
+
+const deleteCandle = async (id) => {
+    try {
+        const deletedCandle = await db.one(
+            "DELETE FROM candles WHERE id=$1 RETURNING *", id
+        )
+        return deletedCandle
     } catch (error) {
         return error
     }
@@ -38,4 +49,5 @@ module.exports = {
     getAllCandles,
     getCandle,
     addCandle,
+    deleteCandle,
 };
