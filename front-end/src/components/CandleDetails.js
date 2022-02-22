@@ -17,6 +17,17 @@ export default function CandleDetails() {
         .catch((err)=> console.log(err))
   }, [id])
 
+  const stars = (n) => {
+    let starRating = ""
+    let i = 0
+    
+    while(i < n){
+        starRating += "⭐";
+        i++;
+    }
+    return starRating
+  }
+
   const handleDelete = () => {
     axios.delete(`${API}/candles/${id}`)
         .then(()=> {
@@ -33,7 +44,7 @@ export default function CandleDetails() {
             <h3>{candle.description}</h3>
             <h3>Scent: {candle.scent}</h3>
             <h3>Featured: {candle.featured ? "🕯️" : "🚫"}</h3>
-            <h3>Rating: {candle.rating}</h3>
+            <h3>Rating: {candle.rating ? stars(candle.rating): "No Rating"}</h3>
             <h3>Price: $ {candle.price}</h3>
         </div>
 
