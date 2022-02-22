@@ -17,9 +17,14 @@ export default function NewCandle (){
     })
 
     const handleTextChange = (e)=> {
-        console.log(e.target.value)
         setCandle({
             ...candle, [e.target.id]: e.target.value
+        })
+    }
+    
+    const handleChecked = (e) =>{
+        setCandle({
+            ...candle, featured: e.target.checked
         })
     }
 
@@ -55,7 +60,7 @@ export default function NewCandle (){
             <br/>
 
             <label htmlFor="featured">Featured:</label>
-            <input type="checkbox" id="featured" value={candle.featured} onChange={handleTextChange} />
+            <input type="checkbox" id="featured" checked={candle.featured} onChange={handleChecked} />
             <br/>
 
             <label htmlFor="description">Description:</label>

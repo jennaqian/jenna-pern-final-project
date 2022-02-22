@@ -5,6 +5,7 @@ import Candles from "./components/Candles.js"
 import CandleDetails from "./components/CandleDetails.js"
 import NewCandle from "./components/NewCandle.js"
 
+
 function App() {
  
   return (
