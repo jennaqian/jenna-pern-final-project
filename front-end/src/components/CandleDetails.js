@@ -48,10 +48,10 @@ export default function CandleDetails() {
             <h3>Price: $ {candle.price}</h3>
         </div>
 
-        <div>
-            <Link to="/candles"><button>Back</button></Link>
-            <Link to={`/candles/${id}/edit`}><button>Edit</button></Link>
-            <button onClick={handleDelete}>Delete</button>
+        <div class="d-grid gap-5 d-md-block">
+            <Link to="/candles"><button class="btn btn-lg btn-outline-primary">Back</button></Link>
+            <Link to={`/candles/${id}/edit`}><button class="btn btn-lg btn-outline-warning">Edit</button></Link>
+            <button onClick={handleDelete} class="btn btn-lg btn-outline-danger">Delete</button>
         </div>
     </div>);
 }

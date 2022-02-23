@@ -50,36 +50,46 @@ export default function EditCandle (){
 
 
     return(
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Candle Name: </label>
-            <input type="text" id="name" value={candle.name} onChange={handleTextChange} placeholder="enter name..." required/>
-            <br/>
+        <form onSubmit={handleSubmit} className="form-container">
+            <div>
+                <label htmlFor="name">Candle Name: </label>
+                <input type="text" id="name" value={candle.name} onChange={handleTextChange} placeholder="enter name..." required/>
+            </div>
+            
+            <div>
+                <label htmlFor="image">Image URL: </label>
+                <input type="text" id="image" value={candle.image} onChange={handleTextChange} placeholder="enter url..."/>
+            </div>
+            
+            <div>
+                <label htmlFor="scent">Scent: </label>
+                <input type="text" id="scent" value={candle.scent} onChange={handleTextChange} placeholder="enter scent..."/>
+            </div>
+            
+            <div>
+                <label htmlFor="price">Price: </label>
+                <input type="number" id="price" min="0" max="10" value={candle.price} onChange={handleTextChange} required/>
+            </div>
+            
+            <div>
+                <label htmlFor="rating">Rating (0 - 5): </label>
+                <input type="number" id="rating" min="0" max="5" value={candle.rating} onChange={handleTextChange}/>
+            </div>
+          
 
-            <label htmlFor="image">Image URL: </label>
-            <input type="text" id="image" value={candle.image} onChange={handleTextChange} placeholder="enter url..."/>
-            <br/>
+            <div>
+                <label htmlFor="featured">Featured: </label>
+                <input type="checkbox" id="featured" checked={candle.featured} onChange={handleChecked} />
+            </div>
 
-            <label htmlFor="scent">Scent: </label>
-            <input type="text" id="scent" value={candle.scent} onChange={handleTextChange} placeholder="enter scent..."/>
-            <br/>
+            <div>
+                <label htmlFor="description">Description: </label>
+                <input type="text" id="description" value={candle.description} onChange={handleTextChange} placeholder="enter description..." required/>
+            </div>
 
-            <label htmlFor="price">Price: </label>
-            <input type="number" id="price" min="0" max="10" value={candle.price} onChange={handleTextChange} required/>
-            <br/>
-
-            <label htmlFor="rating">Rating (0 - 5): </label>
-            <input type="number" id="rating" min="0" max="5" value={candle.rating} onChange={handleTextChange}/>
-            <br/>
-
-            <label htmlFor="featured">Featured: </label>
-            <input type="checkbox" id="featured" checked={candle.featured} onChange={handleChecked} />
-            <br/>
-
-            <label htmlFor="description">Description: </label>
-            <input type="text" id="description" value={candle.description} onChange={handleTextChange} placeholder="enter description..." required/>
-            <br/>
-
-            <input type="submit"/>
+            <div>
+                <input type="submit" class="btn btn-lg btn-outline-success"/>
+            </div>
         </form>
     )
 }
