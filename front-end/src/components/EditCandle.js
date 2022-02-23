@@ -1,11 +1,13 @@
 import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-export default function NewCandle (){
+export default function EditCandle (){
+    const { id } = useParams();
     const navigate = useNavigate();
+
     const [candle, setCandle] = useState({
         name: "",
         image: "",
@@ -15,6 +17,14 @@ export default function NewCandle (){
         featured: false,
         description: "",
     })
+
+    useEffect(()=>{
+        axios.get(`${API}/candles/${id}`)
+            .then((res)=>{
+                setCandle(res.data)
+            })
+            .catch((err)=>console.log(err))
+    },[id])
 
     const handleTextChange = (e)=> {
         setCandle({
@@ -30,12 +40,14 @@ export default function NewCandle (){
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios.post(`${API}/candles`, candle)
+
+        axios.put(`${API}/candles/${id}`, candle)
             .then(()=>{
                 navigate("/candles")
             })
             .catch((err) => console.log(err))
     }
+
 
     return(
         <form onSubmit={handleSubmit}>

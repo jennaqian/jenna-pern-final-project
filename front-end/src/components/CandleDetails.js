@@ -40,7 +40,7 @@ export default function CandleDetails() {
     <div>
         <div>
             <h2>{candle.name}</h2>
-            <img src={candle.image} alt={`Picture of ${candle.name} Candle`}/>
+            <img src={candle.image} alt={candle.name}/>
             <h3>{candle.description}</h3>
             <h3>Scent: {candle.scent}</h3>
             <h3>Featured: {candle.featured ? "🕯️" : "🚫"}</h3>

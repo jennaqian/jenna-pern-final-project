@@ -4,7 +4,7 @@ import Home from "./components/Home.js"
 import Candles from "./components/Candles.js"
 import CandleDetails from "./components/CandleDetails.js"
 import NewCandle from "./components/NewCandle.js"
-
+import EditCandle from "./components/EditCandle.js"
 
 function App() {
  
@@ -17,6 +17,7 @@ function App() {
         <Route path="/candles" element={<Candles />}/>
         <Route path="/candles/:id" element={<CandleDetails />}/>
         <Route path="/candles/new" element={<NewCandle />}/>
+        <Route path="/candles/:id/edit" element={<EditCandle />}/>
       </Routes>
     </Router>
   );
