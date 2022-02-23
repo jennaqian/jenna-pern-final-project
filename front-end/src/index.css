@@ -1,12 +1,123 @@
 nav {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  background-color: lightblue;
+  background-color: #D6E3F8;
+}
+nav img {
+  width: 80px;
+  padding: 10px;
 }
 nav button {
   margin: 20px auto;
+  width: 150px;
+  background: none;
+}
+a{
+  text-decoration: none;
 }
 
-
 /* ADD CSS */
+body{
+  font-family: cursive;
+}
 
+.inputFields-name {
+  grid-area: name;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-image {
+  grid-area: image;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-scent {
+  grid-area: scent;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-price{
+  grid-area: price;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-rating {
+  grid-area: rating;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-featured {
+  grid-area: featured;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-description {
+  grid-area: description;
+  display: grid;
+  margin: 5px;
+}
+.inputFields-btn {
+  grid-area: btn;
+  margin: 20px auto;
+}
+
+.form-container {
+  display: grid;
+  margin: 25px auto;
+  width: 75%;
+  grid-template-areas: 
+  "name name name name"
+  "image image image image"
+  "scent scent featured featured"
+  "price price rating rating"
+  "description description description description"
+  "btn btn btn btn";
+}
+
+.candles-container {
+  display: grid; 
+  grid-template-columns: repeat(3,1fr);
+  width: 75%;
+  margin: 20px auto;
+}
+.candle-container {
+  padding: 15px;
+  width: 95%;
+  border: 5px solid white;
+}
+.candle-container:hover {
+  border: 5px solid #D6E3F8;
+  border-radius: 25px;
+}
+.candle-Img-Sizing {
+  width: 225px;
+  border-radius: 25px;
+}
+
+.home {
+  padding: 25px;
+  width: 75%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.candleDetails-container {
+  width: 75%;
+  padding: 10px;
+  margin: 25px auto;
+  display: grid;
+  grid-template-areas: 
+  "left top"
+  "left top"
+  "left bottom";
+}
+
+.candleDetails-container-left {
+  grid-area: left;
+}
+.candleDetails-container-right-top {
+  grid-area: top;
+}
+.candleDetails-container-right-bottom {
+  grid-area: bottom;
+}

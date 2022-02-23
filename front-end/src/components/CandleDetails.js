@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios"
+import {Card} from "react-bootstrap"
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -37,18 +38,25 @@ export default function CandleDetails() {
   }
 
   return (
-    <div>
-        <div>
-            <h2>{candle.name}</h2>
-            <img src={candle.image} alt={candle.name}/>
-            <h3>{candle.description}</h3>
+    <div className="candleDetails-container">
+        <Card className="candleDetails-container-left" style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={candle.image} alt={candle.name} />
+            <Card.Body>
+                <Card.Title>{candle.name}</Card.Title>
+                <Card.Text>
+                {candle.description}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        
+        <div className="candleDetails-container-right-top">
+            <h3>Rating: {candle.rating ? stars(candle.rating): "No Rating"}</h3>
             <h3>Scent: {candle.scent}</h3>
             <h3>Featured: {candle.featured ? "🕯️" : "🚫"}</h3>
-            <h3>Rating: {candle.rating ? stars(candle.rating): "No Rating"}</h3>
             <h3>Price: $ {candle.price}</h3>
         </div>
 
-        <div class="d-grid gap-5 d-md-block">
+        <div class="d-grid gap-5 d-md-block"  className="candleDetails-container-right-bottom">
             <Link to="/candles"><button class="btn btn-lg btn-outline-primary">Back</button></Link>
             <Link to={`/candles/${id}/edit`}><button class="btn btn-lg btn-outline-warning">Edit</button></Link>
             <button onClick={handleDelete} class="btn btn-lg btn-outline-danger">Delete</button>

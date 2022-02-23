@@ -51,43 +51,43 @@ export default function EditCandle (){
 
     return(
         <form onSubmit={handleSubmit} className="form-container">
-            <div>
+           <div className="inputFields-name">
                 <label htmlFor="name">Candle Name: </label>
-                <input type="text" id="name" value={candle.name} onChange={handleTextChange} placeholder="enter name..." required/>
+                <input type="text" id="name" className="inputFields" value={candle.name} onChange={handleTextChange} placeholder="enter name..." required/>
             </div>
             
-            <div>
+            <div className="inputFields-image">
                 <label htmlFor="image">Image URL: </label>
                 <input type="text" id="image" value={candle.image} onChange={handleTextChange} placeholder="enter url..."/>
             </div>
             
-            <div>
+            <div className="inputFields-scent">
                 <label htmlFor="scent">Scent: </label>
                 <input type="text" id="scent" value={candle.scent} onChange={handleTextChange} placeholder="enter scent..."/>
             </div>
             
-            <div>
+            <div className="inputFields-price">
                 <label htmlFor="price">Price: </label>
                 <input type="number" id="price" min="0" max="10" value={candle.price} onChange={handleTextChange} required/>
             </div>
             
-            <div>
+            <div className="inputFields-rating">
                 <label htmlFor="rating">Rating (0 - 5): </label>
                 <input type="number" id="rating" min="0" max="5" value={candle.rating} onChange={handleTextChange}/>
             </div>
           
 
-            <div>
+            <div className="inputFields-featured">
                 <label htmlFor="featured">Featured: </label>
                 <input type="checkbox" id="featured" checked={candle.featured} onChange={handleChecked} />
             </div>
 
-            <div>
+            <div className="inputFields-description">
                 <label htmlFor="description">Description: </label>
                 <input type="text" id="description" value={candle.description} onChange={handleTextChange} placeholder="enter description..." required/>
             </div>
 
-            <div>
+            <div className="inputFields-btn">
                 <input type="submit" class="btn btn-lg btn-outline-success"/>
             </div>
         </form>
