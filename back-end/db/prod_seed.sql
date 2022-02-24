@@ -1,8 +1,10 @@
-INSERT INTO test (name) VALUES
-('Monday'),
-('Tuesday'),
-('Wednesday'),
-('Thursday'),
-('Friday'),
-('Saturday'),
-('Sunday');
+INSERT INTO candles (name, price, scent, image, rating, featured, description) VALUES
+('Tranquil Garden', 5, 'lavender', 'https://media.istockphoto.com/photos/candles-with-lavender-picture-id682257972?b=1&k=20&m=682257972&s=170667a&w=0&h=iqBSdAAvVAjyvettI6TuXIebBGcqPyicxEpJeRWEWYw=', 3, false, 'A tranquil spot where blooming jasmine, carnations, and sunny neroli offer a peaceful moment during the spring celebration'),
+('Coconut Beach', 5, 'coconut', 'https://media.istockphoto.com/photos/beauty-spa-treatment-with-coconut-oil-nuts-and-shredded-coconut-for-picture-id1216100094?b=1&k=20&m=1216100094&s=170667a&w=0&h=H4kViEDYBvpFKyu1NinS8Xdp8_q0URz9nAiB24rcawk=', 2, false, 'A taste of the tropics — warm coconut blended with pineapple and Tahitian vanilla'),
+('Love Potion', 5, 'jasmine', 'https://media.istockphoto.com/photos/heartshaped-candle-in-her-hands-picture-id182749376?b=1&k=20&m=182749376&s=170667a&w=0&h=gkYluJ3pwtfu8KbFzugN5WeKppQrfOPvIASguBJ5CdU=', 3, false, 'Exotic notes of jasmine blossoms, calming lavender, and bright mandarin join in an olfactory experience reminiscent of a freshly picked bouquet of wildflowers'),
+('Spiced Pumpkin', 5, 'cinnamon', 'https://media.istockphoto.com/photos/burning-candle-pumpkin-and-fall-decorations-on-a-windowboard-space-picture-id844444962?b=1&k=20&m=844444962&s=170667a&w=0&h=N3E8a469i7NDNPoZ2i8dJyNAPT34SZKfxDSXfN0RKOA=', 4, false, 'Pumpkins baked in simmering spices of clove, nutmeg and cinnamon, and sweetened with brown sugar'),
+('White Gardenia', 8, 'jasmine', 'https://media.istockphoto.com/photos/burning-candle-and-white-calla-on-dark-background-with-copy-space-picture-id1209104133?b=1&k=20&m=1209104133&s=170667a&w=0&h=lb7Bvaxzf4z4hYbFWi3skiJDB4MeR5ccmzTUuJbFPQA=', 5, true, 'So captivating! The stunning royal beauty of lush white gardenias in full bloom'),
+('Sakura', 8, 'cherry blossom', 'https://media.istockphoto.com/photos/spring-pink-flowers-in-vase-in-white-interior-picture-id1287541579?b=1&k=20&m=1287541579&s=170667a&w=0&h=oW4DvRMl3v7Vri1bWNn1rlWfCvgMyyB4wp6L-TwlsCI=', 5, true, 'Sitting under the blooming cherry trees, enjoy the sweet bouquet of rose and freesia during the sakura blossom festival'),
+('Clean Cotton', 8, 'lily', 'https://media.istockphoto.com/photos/cotton-flower-and-a-white-candle-in-a-glass-jar-picture-id1155515984?b=1&k=20&m=1155515984&s=170667a&w=0&h=fXu-Uqwx5RVjMuhEynILUCq6BfDdTPRbdIFzOCS531I=', 5, true, 'Sun-dried cotton combined with green notes, white flowers and a hint of lemon'),
+('Fresh Cut Roses', 8, 'rose', 'https://media.istockphoto.com/photos/tea-candle-red-rose-and-rose-petals-on-black-picture-id1133887826?k=20&m=1133887826&s=612x612&w=0&h=FKPUrJ3HKG11R2c4NR_mncanGyOM3SeBONXZhtTOTVA=', 4, false, 'An intoxicating English garden of fragrant heirloom roses'),
+('Midnight Jasmine', 8, 'jasmine', 'https://media.istockphoto.com/photos/beautiful-jasmine-flowers-and-burning-candles-on-white-wooden-table-picture-id1327054443?b=1&k=20&m=1327054443&s=170667a&w=0&h=W2ZM6m-__QCvUztaIheIkqAlyJHvLiK7sw5jZOXfrcA=', 5, true, 'A seductively lush perfume of water jasmine, sweet honeysuckle, neroli, and mandarin blossom');
