@@ -1,9 +1,9 @@
 nav {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  display: flex;
+  justify-content: space-around;
   background-color: #D6E3F8;
 }
-nav img {
+/* nav img {
   width: 80px;
   padding: 10px;
 }
@@ -11,7 +11,48 @@ nav button {
   margin: 20px auto;
   width: 150px;
   background: none;
+} */
+
+.left-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: alias;
+  border: 2px solid #D6E3F8;
+  padding: 5px;
 }
+.left-nav img {
+  width: 35px;
+}
+.left-nav span{
+  font-size: medium;
+  color: black;
+}
+.left-nav:hover{
+  background-color: white;
+  border-radius: 25%;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.right-nav button{
+  width: 150px;
+  height: 35px;
+  background-color: #D6E3F8;
+  border: none;
+  border-radius: 25%;
+  font-size: large;
+}
+.right-nav button:hover {
+  background-color: white;
+  cursor: alias;
+}
+
+
 a{
   text-decoration: none;
 }
@@ -102,9 +143,9 @@ body{
 }
 
 .candleDetails-container {
-  width: 75%;
+  width: 55%;
   padding: 10px;
-  margin: 25px auto;
+  margin: 50px auto;
   display: grid;
   grid-template-areas: 
   "left top"
@@ -120,4 +161,23 @@ body{
 }
 .candleDetails-container-right-bottom {
   grid-area: bottom;
+}
+.select-container{
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.select-tag {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  outline: none;
+  font-size: large;
+  border-radius: 25px;
+  border: 2px solid lightgray;
+}
+.select-tag:hover {
+  font-size: larger;
+  border: 5px solid #D6E3F8;
+  cursor: s-resize;;
 }
