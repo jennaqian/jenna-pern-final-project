@@ -1,3 +1,9 @@
+# Deployed Links 
+
+Front-end: https://jq-pern-final-project-fe.netlify.app/
+back-end: https://jq-cta-be.herokuapp.com/
+
+
 # PERN Final Project Template
 
 - select `use this template`
