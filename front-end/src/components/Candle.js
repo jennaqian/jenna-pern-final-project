@@ -11,14 +11,13 @@ export default function Candle ({candle}){
 
     return(
         <Card className="candle-container">
-            <Link to={`/candles/${candle.id}`}>
+            <Link to={`/candles/${candle.id}`} className="candles-card">
+                    <Card.Title>{candle.name}</Card.Title>
                     <Card.Img src={candle.image ? candle.image : noImg} alt={candle.name}/>
                 <Card.Body>
-                    <Card.Title>{candle.name}</Card.Title>
-
-                    <h4>{candle.description ? firstFourWord(): "No description ..."}</h4>
-                    <span>$ {candle.price}</span>{" "}
-                    {candle.featured ? <span>🕯️</span>: null}
+                    <h5>{candle.description ? firstFourWord(): "No description ..."}</h5>
+                    <span className="spans">${candle.price}</span>{" "}
+                    {candle.featured ? <span className="spans">🕯️</span>: null}
                 </Card.Body>
             </Link>
         </Card>

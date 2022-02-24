@@ -57,33 +57,33 @@ export default function EditCandle (){
             </div>
             
             <div className="inputFields-image">
-                <label htmlFor="image">Image URL: </label>
+                <label htmlFor="image">Candle Image URL: </label>
                 <input type="text" id="image" value={candle.image} onChange={handleTextChange} placeholder="enter url..."/>
             </div>
             
             <div className="inputFields-scent">
-                <label htmlFor="scent">Scent: </label>
+                <label htmlFor="scent">Candle Scent: </label>
                 <input type="text" id="scent" value={candle.scent} onChange={handleTextChange} placeholder="enter scent..."/>
             </div>
             
             <div className="inputFields-price">
-                <label htmlFor="price">Price: </label>
+                <label htmlFor="price">Candle Price: (0-10)</label>
                 <input type="number" id="price" min="0" max="10" value={candle.price} onChange={handleTextChange} required/>
             </div>
             
             <div className="inputFields-rating">
-                <label htmlFor="rating">Rating (0 - 5): </label>
+                <label htmlFor="rating">Camdle Rating (0 - 5): </label>
                 <input type="number" id="rating" min="0" max="5" value={candle.rating} onChange={handleTextChange}/>
             </div>
           
 
             <div className="inputFields-featured">
-                <label htmlFor="featured">Featured: </label>
+                <label htmlFor="featured">Candle Featured: </label>
                 <input type="checkbox" id="featured" checked={candle.featured} onChange={handleChecked} />
             </div>
 
             <div className="inputFields-description">
-                <label htmlFor="description">Description: </label>
+                <label htmlFor="description">Candle Description: </label>
                 <input type="text" id="description" value={candle.description} onChange={handleTextChange} placeholder="enter description..." required/>
             </div>
 
