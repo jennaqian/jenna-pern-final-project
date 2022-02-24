@@ -39,26 +39,14 @@ export default function Candles () {
 
     return(
         <div>
-            
-                <select value={selectedValue} onChange={handleChange}>
-                    <option>Sort Candles by</option>
-                    <option value="featured">Featured</option>
-                    <option value="price">Price</option>
-                </select>
-
-                <select>
-                    <option>lily</option>
-                    <option>lavender</option>
-                    <option>jasmine</option>
-                </select>
-            {/* <DropdownButton varient="light" title="Sort Candles">
-                    <Dropdown.Item>Featured</Dropdown.Item>
-                    <Dropdown.Item>Price</Dropdown.Item>
-            </DropdownButton> */}
+            <select value={selectedValue} onChange={handleChange}>
+                <option>Sort Candles by</option>
+                <option value="featured">Featured</option>
+                <option value="price">Price</option>
+            </select>
             <article className="candles-container">
                 {sortByPriceOrFeatured(selectedValue)}
             </article>
-            
         </div>
     )
 }
