@@ -6,9 +6,10 @@ import CandleDetails from "./components/CandleDetails.js"
 import NewCandle from "./components/NewCandle.js"
 import EditCandle from "./components/EditCandle.js"
 import Footer from "./components/Footer.js"
+import Cart from "./components/Cart.js"
 
 function App() {
- 
+
   return (
     <Router>
       <Navbar />
@@ -19,6 +20,7 @@ function App() {
         <Route path="/candles/:id" element={<CandleDetails />}/>
         <Route path="/candles/new" element={<NewCandle />}/>
         <Route path="/candles/:id/edit" element={<EditCandle />}/>
+        <Route path="/cart" element={<Cart />}/>
       </Routes>
 
       <Footer />

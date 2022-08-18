@@ -9,6 +9,10 @@ export default function Navbar () {
                 <Link to="/candles/new"><button>New Candle</button></Link>
                 <Link to="/candles"><button>Shop Candles</button></Link>
             </div>
+
+            <div className="cart-nav">
+                <Link to ="/cart"><button>Cart</button></Link>
+            </div>
         </nav>
     )
 }
