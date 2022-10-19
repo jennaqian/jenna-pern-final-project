@@ -194,13 +194,20 @@ form label {
   bottom: 0;
   position: fixed;
   width: 100%;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
-.footer img {
-  width: 40px;
-  margin: 0px 25px;
+.footer-github img{
+  width: 50px;
+  padding: 5px;
+}
+.footer-linkedin img{
+  width: 50px;
+  float: right;
+}
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }

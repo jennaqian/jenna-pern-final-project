@@ -1,11 +1,15 @@
-export default function Footer (){
-    return (
-        <footer className="footer">
+export default function Footer() {
+  return (
+    <footer className="footer">
+        <div className="footer-github" >
             <a href="https://github.com/jennaqian"><img src="https://img.icons8.com/fluency/2x/github.png" alt="Github logo"/></a>
-            <p>© 2022 Copyright</p>
+        </div>
+
+        <div className="footer-copyright"> © 2022 The Candle-licious Company, Inc. All rights reserved.</div>
+        
+        <div className="footer-linkedin">
             <a href="https://www.linkedin.com/in/jiayinqian/"><img src="https://img.icons8.com/windows/2x/linkedin.png" alt="LinkedIn logo"/></a>
-        </footer>
-    )
+        </div>
+    </footer>
+  );
 }
-
-

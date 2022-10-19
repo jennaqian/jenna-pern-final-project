@@ -12,7 +12,28 @@ export default function Cart () {
             </div>
 
             <div>
-                <p>Total</p>
+                <h2>Order Summary</h2>
+
+                <div>
+                    <div>
+                        <h4>Subtotal</h4>
+                        <h4>$</h4>
+                    </div>
+
+                    <div>
+                        <h4>Tax</h4>
+                        <h4>$</h4>
+                    </div>
+
+                    <div>
+                        <h4>Total</h4>
+                        <h4>$</h4>
+                    </div>
+
+                    <div>
+                        <h4>Check Out</h4>
+                    </div>
+                </div>
             </div>
 
         </div>
