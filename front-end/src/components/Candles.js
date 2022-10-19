@@ -38,16 +38,27 @@ export default function Candles () {
 
     return(
         <div>
-            <div  className="select-container">
-                <select  className="select-tag" value={selectedValue} onChange={handleChange}>
-                    <option>Sort Candles by</option>
-                    <option value="featured">Featured 🕯️</option>
-                    <option value="price">Price $ - $$$</option>
-                </select>
+
+            <div className="search-sort-container">
+                <div className="search-container">
+                    <input type="text" placeholder="Search..."/>
+                    <button type="submit">Search</button>
+                </div>
+
+                <div className="mybox">
+                    <span className="myarrow"></span>
+                    <select className="custom-select" value={selectedValue} onChange={handleChange}>
+                        <option>Sort Candles by</option>
+                        <option value="featured">Featured 🕯️</option>
+                        <option value="price">Price $ - $$$</option>
+                    </select>
+                </div>
             </div>
+
             <article className="candles-container">
                 {sortByPriceOrFeatured(selectedValue)}
             </article>
+
         </div>
     )
 }

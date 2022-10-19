@@ -153,25 +153,51 @@ body{
 .candleDetails-container-right-bottom {
   grid-area: bottom;
 }
-.select-container{
-  margin: 20px auto;
+
+
+.search-sort-container{
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
-.select-tag {
-  width: 200px;
-  height: 50px;
-  text-align: center;
+
+.search-container{
+  width: 350px;
+}
+
+.mybox {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select {
+  display: inline-block;
+  height: 30px;
+  width: 150px;
   outline: none;
-  font-size: large;
-  border-radius: 25px;
-  border: 2px solid lightgray;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #999;
+  background: #eee;
+  text-align: center;
 }
-.select-tag:hover {
-  font-size: larger;
-  border: 5px solid #D6E3F8;
-  cursor: s-resize;;
+
+.mybox .myarrow {
+  width: 23px;
+  height: 28px;
+  position: absolute;
+  display: inline-block;
+  top: 1px;
+  right: 3px;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXLgiLmUs1qs3M7byaf01fztGJV4lm0YHkw&usqp=CAU") right / 90% no-repeat #eee;
+  pointer-events: none;
 }
+
+
+
+
+
 
 .candles-card {
   text-align: center;
